@@ -37,7 +37,7 @@ jobs:
             sed -i 's/qcom,mdss-pan-physical-width-dimension = <69>;$/qcom,mdss-pan-physical-width-dimension = <695>;/' arch/arm64/boot/dts/qcom/xiaomi/sweet/dsi-panel-k6-38-0c-0a-fhd-dsc-video.dtsi
             sed -i 's/qcom,mdss-pan-physical-height-dimension = <154>;$/qcom,mdss-pan-physical-height-dimension = <1546>;/' arch/arm64/boot/dts/qcom/xiaomi/sweet/dsi-panel-k6-38-0c-0a-fhd-dsc-video.dtsi
                  
-    - name: Build Kernol
+    - name: Build Kernel
       run: |
            export ARCH=arm64
            export PATH="${PWD}/clang/bin:${PWD}gcc64/bin:${PWD}gcc32/bin:$PATH"  
@@ -67,10 +67,10 @@ jobs:
             cp out/arch/arm64/boot/dtb.img AnyKernel3/dtb.img
            fi
         
-    - name: Upload Kernol 
+    - name: Upload Kernel 
       uses: actions/upload-artifact@v4
       with:
-        name: ZenKernoll-MIUI-${{ env.BUILD_TIME }}
+        name: Interstellar-MIUI-${{ env.BUILD_TIME }}
         path: AnyKernel3/*
 
 
