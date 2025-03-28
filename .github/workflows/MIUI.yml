@@ -30,8 +30,8 @@ jobs:
      
     - name: Fetch KernelSU Next-SuSFS branch
       run: |
-           curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -s next-susfs-dev
-           
+          curl -LSs "https://raw.githubusercontent.com/Taufik-Daulay/KernelSU/susfs-155/kernel/setup.sh" | bash -s susfs-155
+         
     - name: Clean previous build
       run: |
            make clean && make mrproper
